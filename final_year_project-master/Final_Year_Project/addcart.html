@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <h1>Shopie</h1>
+        </div>
+        <!-- Other header elements can go here -->
+    </div>
+    <div class="cart">
+        <h2>Shopping Cart</h2>
+        
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-total">
+            <h3>Total: <span id="cart-total">0.00</span></h3>
+            <button onclick="checkout()">Checkout</button>
+            
+        </div>
+        <div id="qr-code-container"></div>
+        
+    </div>
+  
+    
+
+    <div class="product" id="product-1">
+        <div class="product-details">
+            <img src="images/imageid2.jpg" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>1000.00</p>
+            <button onclick="addToCart('Product 1', 1000, 'images/imageid2.jpg')">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="product" id="product-2">
+        <div class="product-details">
+            <img src="images/imageid1.jpg" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>900.00</p>
+            <button onclick="addToCart('Product 2', 900, 'images/imageid1.jpg')">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="product" id="product-3">
+        <div class="product-details">
+            <img src="images/imageid3.jpg" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>1500.00</p>
+            <button onclick="addToCart('Product 3', 1500, 'images/imageid3.jpg')">Add to Cart</button>
+        </div>
+    </div>
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

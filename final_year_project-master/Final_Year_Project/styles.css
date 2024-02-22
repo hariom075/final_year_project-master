@@ -1,0 +1,205 @@
+body {
+    background: linear-gradient(to bottom, #34c2db, #2c3e50); /* Gradient background */
+    font-family: Arial, sans-serif; /* Set a fallback font */
+    margin: 0; /* Remove default margin */
+    padding: 70px 0 20px; /* Add padding: top 50px, right 0, bottom 20px, left 0 */
+    box-sizing: border-box; /* Include padding in the total width/height of the element */
+}
+.header {
+    background-color: #f8f9fa; /* Example background color */
+    padding: 20px 0; /* Example padding */
+}
+
+/* Style the logo */
+.logo h1 {
+    margin: 0; /* Remove default margin */
+    color: #333; /* Example text color */
+    font-size: 36px; /* Example font size */
+    font-family: 'Arial', sans-serif; /* Example font family */
+    text-transform: uppercase; /* Example text transformation */
+    letter-spacing: 2px; /* Example letter spacing */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); /* Example text shadow */
+    transform: translateY(-5px); /* Shift the logo up */
+}
+
+.cart {
+    background-color: #636161d4;
+    padding: 20px;
+    float: right; /* Shifts the cart to the right */
+    width: 45%; /* Reduced width for better alignment */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.768); /* Add box-shadow */
+}
+
+.cart-items, .cart-total {
+    margin-bottom: 60px;
+}
+
+.cart-items .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.cart-items .cart-item img {
+    width: 70px; /* Adjust the image size as needed */
+    margin-right: 10px;
+}
+
+.cart-items .item-details {
+    flex-grow: 1;
+}
+
+
+.cart-item {
+    margin-bottom: 20px;
+}
+
+/* Shift remove button to the right */
+.item-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove-button {
+    color: red;
+    cursor: pointer;
+    margin-left: 20px; /* Add margin to shift the remove button */
+}
+.remove-button {
+    color: #090a09; /* Green color */
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: white;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.remove-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: rgb(246, 248, 246); /* Green color with transparency */
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.remove-button:hover::before {
+    animation: neon 1.5s infinite alternate;
+}
+
+@keyframes neon {
+    0% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.remove-button:hover {
+    color: #ff0000; /* White color */
+    box-shadow: 0 0 10px 0 rgba(3, 255, 32, 0.919), 0 0 20px 0 rgba(17, 0, 253, 0.5), 0 0 30px 0 rgb(32, 255, 3), 0 0 40px 0 rgba(255, 0, 179, 0.799), 0 0 50px 0 rgba(255, 255, 255, 0.5), 0 0 60px 0 rgba(255, 255, 255, 0.5), 0 0 70px 0 rgba(255, 255, 255, 0.5);
+}
+.quantity-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .quantity-button {
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .quantity-display {
+    padding: 5px;
+    font-weight: bold;
+  }
+  .product {
+    margin-bottom: 20px; /* Add space between product containers */
+}
+
+.product .product-details {
+    width: 270px; /* Set the width to your desired size */
+    border: 1px solid #ccc; /* Border around the product details */
+    padding: 10px; /* Add padding inside the box */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f9f9f9; /* Background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.711); /* Add box-shadow */
+    transition: box-shadow 0.3s; /* Add transition for smooth effect */
+}
+
+.product .product-details:hover {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.854); /* Change box-shadow on hover */
+}
+
+.product img {
+    max-width: 100%;
+    height: auto; /* Ensure image aspect ratio is maintained */
+    margin-bottom: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+.product img {
+    max-width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+}
+  .product button {
+    background-color: #090a09;
+    color: rgb(255, 6, 6);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative; /* Required for pseudo-element */
+    overflow: hidden; /* Required for pseudo-element */
+    transition: background-color 0.3s; /* Add transition for smooth color change */
+}
+
+.product button:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: rgba(21, 21, 20, 0.2); /* Green color with transparency */
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    z-index: -1;
+    animation: neon 1.5s infinite alternate; /* Neon effect animation */
+}
+
+@keyframes neon {
+    0% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.product button:hover {
+    background-color: rgba(0, 255, 17, 0.631); /* RGB color with transparency */
+}
+
+
